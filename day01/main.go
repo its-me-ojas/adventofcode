@@ -56,4 +56,15 @@ func main() {
 
 	fmt.Println(ans)
 
+	hm := make(map[int]int)
+	for _, value := range secondList {
+		hm[value]++
+	}
+
+	ansSecond := 0
+	for _, value := range firstList {
+		ansSecond += value * hm[value]
+	}
+	fmt.Println(ansSecond)
+
 }
