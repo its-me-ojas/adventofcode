@@ -1,0 +1,13 @@
+[package]
+name = "adventofcode"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "2024/src/lib.rs"
+
+[[bin]]
+name = "solution"
+path = "2024/src/main.rs"
+
+[dependencies]
