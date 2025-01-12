@@ -1,7 +1,7 @@
 use std::{collections::HashMap, fs::read_to_string};
 
-pub fn read_input_from_file() -> Vec<Vec<i32>> {
-    let file = read_to_string("2024/src/day01/input.txt").expect("failed to read file");
+pub fn read_input_from_file(path_to_file: &str) -> Vec<Vec<i32>> {
+    let file = read_to_string(path_to_file).expect("failed to read file");
     file.lines()
         .map(|line| {
             line.split_whitespace()
@@ -12,7 +12,7 @@ pub fn read_input_from_file() -> Vec<Vec<i32>> {
 }
 
 pub fn solution1() {
-    let input = read_input_from_file();
+    let input = read_input_from_file("2024/src/day01/input.txt");
     let mut vec1 = Vec::new();
     let mut vec2 = Vec::new();
     for i in 0..input.len() {
@@ -32,7 +32,7 @@ pub fn solution1() {
 }
 
 pub fn solution2() {
-    let input = read_input_from_file();
+    let input = read_input_from_file("2024/src/day01/input.txt");
     let mut vec1 = Vec::new();
     let mut vec2 = Vec::new();
     for i in 0..input.len() {
